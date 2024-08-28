@@ -1,0 +1,69 @@
+/* Google Fonts / Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #EED891;
+}
+.wrapper {
+    position: relative;
+    height: 330px;
+    width: 620px;    
+}
+.wrapper .flip-card {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background: #D48600;
+}
+.wrapper:hover .flip-card {
+    transform: rotateY(180deg);
+}
+.flip-card .card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    background: #D48600;
+    border-top: 2px solid #cc6600;
+    border-left: 2px solid #cc6600;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+.card span.circle,
+.card span.square {
+    height: 110px;
+    width: 110px;
+    border: 10px solid #4d2600;
+}
+.card span.circle {
+    border-radius: 50%;
+}
+.card span.triangle {
+    position: relative;
+    height: 0;
+    width: 0;
+    margin-right: 16px;
+    border-right: 60px solid transparent;
+    border-left: 60px solid transparent;
+    border-bottom: 110px solid #4d2600;
+}
+.card span.triangle::before {
+    content: '';
+    position: absolute;
+    left: -40px;
+    top: 20px;
+    height: 0;
+    width: 0;
+    border-right: 40px solid transparent;
+    border-left: 40px solid transparent;
+    border-bottom: 80px solid #D48600;
+}
